@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hephzibah School - Academic Excellence, Wholesome Development & Fun</title>
+    <meta name="description" content="Hephzibah School - DepEd-recognized programs from Pre-School to Senior High School. Established 2005. Are You Ready To Play?">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema Markup for Educational Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Hephzibah School",
+        "url": "https://hephzibahschool.edu.ph",
+        "logo": "logo.jpg",
+        "description": "Academic Excellence, Wholesome Development & Fun - DepEd-recognized programs from Pre-School to Senior High School",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sta. Rosa-Tagaytay Rd. Tartaria",
+            "addressLocality": "Silang",
+            "addressRegion": "Cavite",
+            "addressCountry": "PH"
+        },
+        "telephone": "+639171263582",
+        "email": "hephoff@gmail.com",
+        "foundingDate": "2005"
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
+        
+        :root {
+            --primary-green: #2E8B57;
+            --primary-blue: #1E90FF;
+            --primary-red: #DC143C;
+            --dark: #1A1A2E;
+            --gold: #FFD700;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-blue);
+        }
+        
+        /* Hero Wave Background */
+        .wave-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-bg::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,78.09-7.5,14.91-10.61,30.94-26.18,48-31.65,44.78-14.35,94.8-5.7,129.11,23.87,36.2,30.63,76.56,47.33,118.4,43.95,41.12-3.3,83.42-31.4,106.8-72.61C1198.49,36.95,1198.34,12,1200,0V0Z" fill="%23ffffff" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>');
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        /* Navigation Enhancements */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after, .active-nav::after {
+            width: 100%;
+        }
+        
+        /* Card Hover Effects */
+        .feature-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .feature-card:hover::before {
+            left: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-blue), var(--primary-red));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        
+        /* Floating Action Button */
+        .fab-messenger {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #0084ff, #00c6ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,132,255,0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .fab-messenger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0,132,255,0.6);
+        }
+        
+        /* Loading Animation */
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-green);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+      .mobile-menu-animation {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        
+        /* Click to Call Styling */
+        .click-to-call {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .click-to-call:hover {
+            color: var(--primary-blue);
+            transform: scale(1.05);
+            display: inline-block;
+        }
+        
+        /* Activity Icons */
+        .activity-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .activity-icon:hover {
+            transform: rotate(360deg) scale(1.2);
+        }
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(46, 139, 87, 0.1);
+            font-family: Georgia, serif;
+        }
+        
+        /* Image Lazy Loading Placeholder */
+        .lazy-load {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="logo.jpg" alt="Hephzibah School Logo" class="h-12 w-12 mr-3" loading="lazy">
+                    <div>
+                        <span class="heading-font text-xl sm:text-2xl text-gray-900">Hephzibah School</span>
+                        <span class="hidden sm:block text-xs text-gray-600">Est. 2005</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#home" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm active-nav">Home</a>
+                    <a href="#about" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm">About</a>
+                    <a href="#programs" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm">Programs</a>
+                    <a href="#activities" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm">Activities</a>
+                    <a href="#events" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm">Events</a>
+                    <a href="#admissions" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm">Admissions</a>
+                    <a href="#contact" class="nav-link text-gray-900 hover:text-green-700 px-2 py-2 font-medium text-sm">Contact</a>
+                    <a href="tel:+639661430376" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition duration-300 flex items-center text-sm">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+    <!-- Floating Messenger Button -->
+    <a href="https://m.me/hephzibahschool?text=Hello!%20I'm%20interested%20in%20enrolling%20my%20child%20at%20Hephzibah%20School.%20Can%20you%20provide%20more%20information?" 
+       target="_blank" 
+       class="fab-messenger"
+       aria-label="Contact us on Messenger">
+        <i class="fab fa-facebook-messenger"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="wave-bg bg-gradient-to-br from-green-600 via-blue-600 to-red-600 text-white py-20 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl mb-4 slide-in">
+                        Academic Excellence,<br>
+                        <span class="gradient-text">Wholesome Development</span><br>
+                        & Fun
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-6 font-light slide-in" style="animation-delay: 0.2s;">
+                        "Are You Ready To Play?"
+                    </p>
+                    <p class="text-lg mb-8 slide-in" style="animation-delay: 0.4s;">
+                        DepEd-recognized programs from Pre-School to Senior High School.<br>
+                        Nurturing future leaders through balanced education since 2005.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 slide-in" style="animation-delay: 0.6s;">
+                        <a href="https://m.me/hephzibahschool?text=I%20want%20to%20enroll%20my%20child%20at%20Hephzibah%20School.%20Please%20send%20me%20the%20enrollment%20form%20and%20requirements." 
+                           target="_blank"
+                           class="bg-white hover:bg-gray-100 text-green-700 font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 text-center shadow-lg">
+                            <i class="fas fa-graduation-cap mr-2"></i> Enroll Now - Early Bird Discount!
+                        </a>
+                        <a href="#activities" class="bg-transparent border-2 border-white hover:bg-white hover:text-green-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105 text-center">
+                            <i class="fas fa-gamepad mr-2"></i> Explore Activities
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-6 text-sm slide-in" style="animation-delay: 0.8s;">
+                        <div class="flex items-center">
+                            <i class="fas fa-award text-gold mr-2"></i>
+                            <span>18+ Years of Excellence</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-gold mr-2"></i>
+                            <span>2+ Generation Families</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative float-animation">
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-3xl opacity-30"></div>
+                        <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/487486895_1134132888728106_4591267606669138653_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHy6_jOPV0Qa_rtgfnzRRUl3hial70NuIfeGJqXvQ24h2LIs1SdjfZtzYR0_5SKERx5GyyLYEihEjnlJgLU8Uq6&_nc_ohc=5cE6lLdAMtgQ7kNvwE6D4Nz&_nc_oc=Adn7bZLgQf7rGsi0yIYqLW-BCWfp1UmNAlk6I3uZAf1iEzxC5wfB3Yo7MCuxT7KGHXzzs-kpVmNmozl20uKMUs76&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=5kqmUtc3QGdZt3VD8DPXCg&oh=00_AfK47bnrlsyT4L0KFLu6vTXuRRbCRB6HSuWo1LyvUok6SQ&oe=6838D7F1" 
+                             alt="Students playing at Hephzibah School" 
+                             class="relative z-10 rounded-2xl shadow-2xl w-full max-w-lg transform rotate-3 hover:rotate-0 transition-transform duration-500"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16 -mt-16 relative z-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">2005</div>
+                    <p class="text-gray-600">Established</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">4</div>
+                    <p class="text-gray-600">Academic Levels</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">2+</div>
+                    <p class="text-gray-600">Generation Families</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">FREE</div>
+                    <p class="text-gray-600">Sports Facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    About <span class="gradient-text">Hephzibah School</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-600 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Where multi-generational trust meets innovative education
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="relative">
+                        <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/490723241_1145125190962209_4472600813000807927_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGWhUOLs8BjST-Bznl8pncNEagB9OHed6kRqAH04d53qcdiwJRFmFsPcXEId6E3cc7tOo_qMTAuzRJjusod6r1c&_nc_ohc=A_GHSPinqXQQ7kNvwE9dLZx&_nc_oc=Adl3T2jiegAxNfUeYrknaSMIR-7mql0n4aZ_9Fni_Q4bsfHR-iMwhnt8bEud6F-ZXv62bzEd-dBNDQaBsrrEkBaJ&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=hVgV5YkXTMq4W7-Ine1ziQ&oh=00_AfJ5TieT9tJl2xdL49E-UnUCWSJdGa4-v6xcRWh7gr1deg&oe=6838D19C" 
+                             alt="Hephzibah School campus" 
+                             class="rounded-2xl shadow-xl w-full"
+                             loading="lazy">
+                        <div class="absolute -bottom-6 -right-6 bg-green-600 text-white p-6 rounded-xl shadow-lg">
+                            <p class="text-3xl font-bold">18+</p>
+                            <p class="text-sm">Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Story & Mission</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Since 2005, Hephzibah School has been a cornerstone of quality education in Silang, Cavite. 
+                        Our name, meaning "My delight is in her," reflects our joy in nurturing each student's unique potential.
+                    </p>
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        We believe in <strong>"Learning Through Play"</strong> - combining academic excellence with non-digital 
+                        skill development to create well-rounded individuals ready for the challenges of tomorrow.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-900">DepEd-Recognized Excellence</h4>
+                                <p class="text-gray-600">All programs meet and exceed Department of Education standards</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-chess"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-900">Non-Digital Development</h4>
+                                <p class="text-gray-600">Focus on hands-on learning through sports, games, and activities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-900">Family Legacy</h4>
+                                <p class="text-gray-600">Trusted by families for multiple generations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Academic <span class="gradient-text">Programs</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Comprehensive education from Pre-School to Senior High School
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pre-School -->
+                <div class="feature-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:from-green-100 hover:to-green-200">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Pre-School</h3>
+                    <p class="text-gray-700 mb-4">DepEd-recognized curriculum with play-based learning approach</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Social development focus</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Early literacy & numeracy</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i>Creative expression</li>
+                    </ul>
+                    <a href="https://m.me/hephzibahschool?text=I'm%20interested%20in%20your%20Pre-School%20program.%20Please%20send%20more%20information." 
+                       target="_blank"
+                       class="text-green-600 hover:text-green-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Elementary -->
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:from-blue-100 hover:to-blue-200">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Elementary</h3>
+                    <p class="text-gray-700 mb-4">Strong foundation with introduction to non-digital games</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Core academics mastery</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Critical thinking skills</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i>Sports introduction</li>
+                    </ul>
+                    <a href="https://m.me/hephzibahschool?text=I'm%20interested%20in%20your%20Elementary%20program.%20Please%20send%20more%20information." 
+                       target="_blank"
+                       class="text-blue-600 hover:text-blue-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Junior High -->
+                <div class="feature-card bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 text-center hover:from-red-100 hover:to-red-200">
+                    <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Junior High</h3>
+                    <p class="text-gray-700 mb-4">Leadership development & intramural sports preparation</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-red-600 mr-2"></i>Advanced academics</li>
+                        <li><i class="fas fa-check text-red-600 mr-2"></i>Leadership programs</li>
+                        <li><i class="fas fa-check text-red-600 mr-2"></i>Competition prep</li>
+                    </ul>
+                    <a href="https://m.me/hephzibahschool?text=I'm%20interested%20in%20your%20Junior%20High%20School%20program.%20Please%20send%20more%20information." 
+                       target="_blank"
+                       class="text-red-600 hover:text-red-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Senior High -->
+                <div class="feature-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:from-purple-100 hover:to-purple-200">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 activity-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Senior High</h3>
+                    <p class="text-gray-700 mb-4">HUMMS & ABM tracks with career immersion</p>
+                    <ul class="text-left text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>College preparation</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Career immersion</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Research projects</li>
+                    </ul>
+                    <a href="https://m.me/hephzibahschool?text=I'm%20interested%20in%20your%20Senior%20High%20School%20tracks%20(HUMMS/ABM).%20Please%20send%20more%20information." 
+                       target="_blank"
+                       class="text-purple-600 hover:text-purple-800 font-semibold">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Non-Digital Activities Section -->
+    <section id="activities" class="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-red-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Development & Fun <span class="gradient-text">Campaign</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-600 to-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-4">
+                    "Are You Ready To Play?" - Learning Through Non-Digital Activities
+                </p>
+                <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full">
+                    <i class="fas fa-star mr-2"></i>
+                    <span class="font-semibold">FREE for All Enrolled Students!</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+                <!-- Carrom Board -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="text-5xl mb-3 activity-icon">🎯</div>
+                    <h4 class="font-semibold text-gray-900">Carrom Board</h4>
+                    <p class="text-sm text-gray-600 mt-2">Strategy & Precision</p>
+                </div>
+                
+                <!-- Chess -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="text-5xl mb-3 activity-icon">♟️</div>
+                    <h4 class="font-semibold text-gray-900">Chess</h4>
+                    <p class="text-sm text-gray-600 mt-2">Critical Thinking</p>
+                </div>
+                
+                <!-- Table Tennis -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="text-5xl mb-3 activity-icon">🏓</div>
+                    <h4 class="font-semibold text-gray-900">Table Tennis</h4>
+                    <p class="text-sm text-gray-600 mt-2">Hand-Eye Coordination</p>
+                </div>
+                
+                <!-- Basketball -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="text-5xl mb-3 activity-icon">🏀</div>
+                    <h4 class="font-semibold text-gray-900">Basketball</h4>
+                    <p class="text-sm text-gray-600 mt-2">Team Building</p>
+                </div>
+                
+                <!-- Badminton -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="text-5xl mb-3 activity-icon">🏸</div>
+                    <h4 class="font-semibold text-gray-900">Badminton</h4>
+                    <p class="text-sm text-gray-600 mt-2">Agility & Speed</p>
+                </div>
+                
+                <!-- Volleyball -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="text-5xl mb-3 activity-icon">🏐</div>
+                    <h4 class="font-semibold text-gray-900">Volleyball</h4>
+                    <p class="text-sm text-gray-600 mt-2">Collaboration</p>
+                </div>
+            </div>
+
+            <!-- Special Partnership -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.Vhfh-eZuBWINFXLTJ5h6uwHaHa?cb=iwp2&rs=1&pid=ImgDetMain" 
+                             alt="Skyway Resort Swing & Slide" 
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                    </div>
+                    <div class="md:w-1/2 p-8 flex items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                                <i class="fas fa-handshake text-green-600 mr-2"></i>
+                                Outdoor Partnership
+                            </h3>
+                            <h4 class="text-xl text-blue-600 mb-4">Skyway Resort Swing & Slide</h4>
+                            <p class="text-gray-700 mb-6">
+                                Experience outdoor adventures and nature-based learning at our partner facility. 
+                                Perfect for field trips, camping, and outdoor skill development.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-tree text-green-600 mr-2"></i>Nature exploration</li>
+                                <li><i class="fas fa-campground text-green-600 mr-2"></i>Camping activities</li>
+                                <li><i class="fas fa-mountain text-green-600 mr-2"></i>Adventure courses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vacation Programs -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Vacation Special Programs</h3>
+                <p class="text-lg text-gray-700">Make every break count with our enriching vacation activities</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">🏕️</div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Themed Camping Trips</h4>
+                    <p class="text-gray-700 mb-4">Adventure-based learning experiences in nature</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Survival skills workshops</li>
+                        <li>• Team building activities</li>
+                        <li>• Stargazing sessions</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-100 to-teal-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">🏃‍♂️</div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Sports Clinics</h4>
+                    <p class="text-gray-700 mb-4">Beginner-friendly training in volleyball & badminton</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Professional coaching</li>
+                        <li>• Skills development</li>
+                        <li>• Friendly tournaments</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div class="text-4xl mb-4">🧮</div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Academic Workshops</h4>
+                    <p class="text-gray-700 mb-4">Math & Science competition preparation</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Problem-solving techniques</li>
+                        <li>• Competition strategies</li>
+                        <li>• Mock competitions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Annual <span class="gradient-text">Events & Competitions</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Building confidence, teamwork, and excellence through friendly competition
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Intramurals -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center">
+                        <i class="fas fa-trophy text-white text-6xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Intramurals</h3>
+                        <p class="text-gray-600 mb-4">Annual sports fest fostering healthy competition and school spirit</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Basketball</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Volleyball</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Athletics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Olympics -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-6xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Academic Olympics</h3>
+                        <p class="text-gray-600 mb-4">Challenging minds through Math, Science, and debate competitions</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Math Challenge</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Science Fair</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Debate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Weekend -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center">
+                        <i class="fas fa-campground text-white text-6xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Family Camping Weekend</h3>
+                        <p class="text-gray-600 mb-4">Strengthening bonds through outdoor adventures and team activities</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Team Building</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Outdoor Skills</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Bonfire</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cheerleading -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center">
+                        <i class="fas fa-star text-white text-6xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cheerleading Competition</h3>
+                        <p class="text-gray-600 mb-4">Showcasing coordination, creativity, and team spirit</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Dance</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Stunts</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-3 py-1 rounded-full">Choreography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Talent Showcase -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center">
+                        <i class="fas fa-microphone text-white text-6xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Talent Showcases</h3>
+                        <p class="text-gray-600 mb-4">Platform for students to share their unique gifts and abilities</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Music</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Arts</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports Tournaments -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-medal text-white text-6xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sports Tournaments</h3>
+                        <p class="text-gray-600 mb-4">Inter-level competitions in basketball and volleyball</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">League Play</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Championships</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Awards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-20 bg-gradient-to-br from-green-600 to-blue-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl mb-4">
+                    Join the Hephzibah Family
+                </h2>
+                <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Enrollment is now ongoing with Early Bird Discount!
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden text-gray-900">
+                <div class="lg:flex">
+                    <div class="lg:w-1/2 bg-gradient-to-br from-green-50 to-blue-50 p-8 lg:p-12">
+                        <h3 class="text-3xl font-bold mb-6">Enrollment Benefits</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Early Bird Discount</h4>
+                                    <p class="text-gray-600">Save on tuition fees when you enroll early</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Free Sports Facilities</h4>
+                                    <p class="text-gray-600">No charges for non-digital game equipment use</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Priority Slots</h4>
+                                    <p class="text-gray-600">Guaranteed slot in vacation programs</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold text-lg">Legacy Family Priority</h4>
+                                    <p class="text-gray-600">Special consideration for 2nd generation enrollees</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-6 bg-green-100 rounded-xl">
+                            <h4 class="font-bold text-green-800 mb-2">
+                                <i class="fas fa-gift mr-2"></i>Special Offer
+                            </h4>
+                            <p class="text-green-700">Enroll 2 or more children and get additional discounts!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 p-8 lg:p-12 bg-white">
+                        <h3 class="text-3xl font-bold mb-6">Quick Enrollment Process</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">1</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Send Inquiry</h4>
+                                    <p class="text-gray-600">Message us on Facebook or call</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">2</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Submit Requirements</h4>
+                                    <p class="text-gray-600">In-person or online options available</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">3</div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Complete Enrollment</h4>
+                                    <p class="text-gray-600">Secure your child's slot</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <a href="https://m.me/hephzibahschool?text=Hello!%20I%20want%20to%20enroll%20my%20child%20at%20Hephzibah%20School.%20Please%20send%20me%20the%20enrollment%20form%20and%20requirements.%20I'm%20interested%20in%20the%20Early%20Bird%20Discount." 
+                               target="_blank"
+                               class="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <i class="fab fa-facebook-messenger mr-2"></i>
+                                Enroll via Messenger
+                            </a>
+                            
+                            <div class="flex gap-4">
+                                <a href="tel:+639661430376" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 text-center">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Call Now
+                                </a>
+                                <a href="https://m.me/hephzibahschool?text=Please%20send%20me%20the%20enrollment%20form%20PDF." 
+                                   target="_blank"
+                                   class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 text-center">
+                                    <i class="fas fa-file-pdf mr-2"></i>
+                                    Get Form
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 text-center text-sm text-gray-600">
+                            <p>Questions? Contact us:</p>
+                            <p class="font-semibold">
+                                <a href="tel:+639661430376" class="click-to-call">0966 143 0376</a> • 
+                                <a href="tel:+639173263582" class="click-to-call">0917 326 3582</a> • 
+                                <a href="tel:+639157533933" class="click-to-call">0915 753 3933</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Thank You, <span class="gradient-text">Parents!</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-600 to-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Multi-generational families continue to trust us with their children's education
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                             alt="Parent testimonial" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             loading="lazy">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Maria Santos</h4>
+                            <p class="text-sm text-gray-600">Parent of 3 Hephzibah graduates</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "All three of my children graduated from Hephzibah. Now, my eldest is enrolling her own child here. 
+                        The values and education they received shaped them into successful adults."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Parent testimonial" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             loading="lazy">
+                        <div>
+                            <h4 class="font-bold text-gray-900">John Reyes</h4>
+                            <p class="text-sm text-gray-600">2nd generation parent</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "I was a student here in 2008, and now my daughter is in Grade 3. The non-digital approach 
+                        is even more valuable today. She loves the chess club and volleyball!"
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Parent testimonial" 
+                             class="w-16 h-16 rounded-full object-cover mr-4"
+                             loading="lazy">
+                        <div>
+                            <h4 class="font-bold text-gray-900">Ana Dela Cruz</h4>
+                            <p class="text-sm text-gray-600">Parent of current students</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "The free access to sports facilities is amazing! My kids stay active and healthy. 
+                        The vacation programs are well-organized and my children always come home excited."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-4xl md:text-5xl text-gray-900 mb-4">
+                    Visit <span class="gradient-text">Us</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Located near Skyway Resort Swing & Slide in Silang, Cavite
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 text-lg">Location</h4>
+                                <p class="text-gray-600">Sta. Rosa-Tagaytay Rd. Tartaria, Silang, Cavite</p>
+                                <p class="text-sm text-gray-500 mt-1">Near Skyway Resort Swing & Slide</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 bg-gradient-to-r from-blue-600 to-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 text-lg">Phone Numbers</h4>
+                                <p class="space-y-1">
+                                    <a href="tel:+639661430376" class="text-gray-600 hover:text-blue-600 block click-to-call">
+                                        <i class="fas fa-phone-alt text-xs mr-2"></i>0966 143 0376 (General)
+                                    </a>
+                                    <a href="tel:+639173263582" class="text-gray-600 hover:text-blue-600 block click-to-call">
+                                        <i class="fas fa-phone-alt text-xs mr-2"></i>0917 326 3582 (Admissions)
+                                    </a>
+                                    <a href="tel:+639157533933" class="text-gray-600 hover:text-blue-600 block click-to-call">
+                                        <i class="fas fa-phone-alt text-xs mr-2"></i>0915 753 3933 (Emergency)
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 bg-gradient-to-r from-red-600 to-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 text-lg">Email</h4>
+                                <a href="mailto:hephoff@gmail.com" class="text-gray-600 hover:text-blue-600">
+                                    hephoff@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start group">
+                            <div class="flex-shrink-0 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900 text-lg">Office Hours</h4>
+                                <p class="text-gray-600">
+                                    Monday-Friday: 8:00 AM - 5:00 PM<br>
+                                    Saturday: 9:00 AM - 12:00 PM<br>
+                                    <span class="text-sm text-gray-500">Closed on Sundays and Holidays</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-gradient-to-r from-green-100 to-blue-100 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-3">Transportation Guide</h4>
+                        <p class="text-gray-700 text-sm">
+                            <i class="fas fa-bus mr-2 text-green-600"></i>
+                            From Silang Town Proper: Take jeepney bound for Tagaytay, alight at Tartaria<br>
+                            <i class="fas fa-car mr-2 text-blue-600"></i>
+                            Via Private Vehicle: Along Sta. Rosa-Tagaytay Road, look for Skyway Resort signs
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-900 mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com/hephzibahschool" 
+                               target="_blank"
+                               class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://m.me/hephzibahschool" 
+                               target="_blank"
+                               class="bg-gradient-to-r from-blue-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                            <a href="mailto:hephoff@gmail.com" 
+                               class="bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:+639173263582" 
+                               class="bg-green-600 hover:bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8">Quick Inquiry</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="parent-name" class="block text-gray-700 font-medium mb-2">Parent's Name</label>
+                            <input type="text" id="parent-name" name="parent-name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="contact-number" class="block text-gray-700 font-medium mb-2">Contact Number</label>
+                            <input type="tel" id="contact-number" name="contact-number" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="child-grade" class="block text-gray-700 font-medium mb-2">Child's Grade Level</label>
+                            <select id="child-grade" name="child-grade" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                                <option value="">Select Grade Level</option>
+                                <option value="Pre-School">Pre-School</option>
+                                <option value="Kindergarten">Kindergarten</option>
+                                <option value="Grade 1">Grade 1</option>
+                                <option value="Grade 2">Grade 2</option>
+                                <option value="Grade 3">Grade 3</option>
+                                <option value="Grade 4">Grade 4</option>
+                                <option value="Grade 5">Grade 5</option>
+                                <option value="Grade 6">Grade 6</option>
+                                <option value="Grade 7">Grade 7</option>
+                                <option value="Grade 8">Grade 8</option>
+                                <option value="Grade 9">Grade 9</option>
+                                <option value="Grade 10">Grade 10</option>
+                                <option value="Grade 11 - HUMMS">Grade 11 - HUMMS</option>
+                                <option value="Grade 11 - ABM">Grade 11 - ABM</option>
+                                <option value="Grade 12 - HUMMS">Grade 12 - HUMMS</option>
+                                <option value="Grade 12 - ABM">Grade 12 - ABM</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                                      placeholder="Tell us about your child's interests or any questions you have..."></textarea>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button type="submit" 
+                                    class="flex-1 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Inquiry
+                            </button>
+                            <a href="https://m.me/hephzibahschool" 
+                               target="_blank"
+                               class="flex-1 bg-gradient-to-r from-blue-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-center">
+                                <i class="fab fa-facebook-messenger mr-2"></i>
+                                Chat Now
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="relative h-96">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.831440590174!2d121.01952358475229!3d14.204646050746991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7c65b2fc3d2f%3A0x6840941893fcafe7!2sHEPHZIBAH%20SCHOOL!5e0!3m2!1sen!2sph!4v1748175621582!5m2!1sen!2sph"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                class="w-full h-full">
+        </iframe>
+        <div class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4">
+            <h4 class="font-bold text-gray-900 mb-2">
+                <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                Hephzibah School
+            </h4>
+            <p class="text-sm text-gray-600">
+                Sta. Rosa-Tagaytay Rd. Tartaria<br>
+                Silang, Cavite, Philippines
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Hephzibah School Logo" class="h-10 w-10 mr-3" loading="lazy">
+                        <span class="heading-font text-2xl">Hephzibah School</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Academic Excellence, Wholesome Development & Fun since 2005
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        "Are You Ready To Play?"
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition duration-300">Academic Programs</a></li>
+                        <li><a href="#activities" class="text-gray-400 hover:text-white transition duration-300">Activities & Sports</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition duration-300">Annual Events</a></li>
+                        <li><a href="#admissions" class="text-gray-400 hover:text-white transition duration-300">Enrollment</a></li>
+                        <li><a href="https://m.me/hephzibahschool" target="_blank" class="text-gray-400 hover:text-white transition duration-300">Parent Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Sta. Rosa-Tagaytay Rd. Tartaria, Silang, Cavite
+                        </li>
+                        <li>
+                            <a href="tel:+639661430376" class="hover:text-white transition duration-300 click-to-call">
+                                <i class="fas fa-phone mr-2"></i>
+                                0966 143 0376
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:hephoff@gmail.com" class="hover:text-white transition duration-300">
+                                <i class="fas fa-envelope mr-2"></i>
+                                hephoff@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enroll Now!</h4>
+                    <p class="text-gray-400 mb-4">
+                        Take advantage of our Early Bird Discount
+                    </p>
+                    <a href="https://m.me/hephzibahschool?text=I%20want%20to%20enroll%20my%20child%20at%20Hephzibah%20School!" 
+                       target="_blank"
+                       class="inline-block bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Start Enrollment
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2023 Hephzibah School. All rights reserved. DepEd Recognized.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="https://facebook.com/hephzibahschool" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://m.me/hephzibahschool" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-messenger"></i>
+                        </a>
+                        <a href="mailto:hephoff@gmail.com" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Defer Font Awesome CSS
+    const deferredStyles = document.createElement('link');
+    deferredStyles.rel = 'stylesheet';
+    deferredStyles.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(deferredStyles);
+
+    // Active nav highlight
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        let currentSection = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (
+                window.scrollY >= sectionTop - 100 &&
+                window.scrollY < sectionTop + sectionHeight - 100
+            ) {
+                currentSection = '#' + section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active-nav');
+            if (link.getAttribute('href') === currentSection) {
+                link.classList.add('active-nav');
+            }
+        });
+    });
+
+    // Form submission
+    document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const parentName = formData.get('parent-name');
+        const contactNumber = formData.get('contact-number');
+        const childGrade = formData.get('child-grade');
+        const message = formData.get('message');
+
+        const messengerMessage = encodeURIComponent(
+            `INQUIRY FROM WEBSITE:\n\n` +
+            `Parent: ${parentName}\n` +
+            `Contact: ${contactNumber}\n` +
+            `Grade Level: ${childGrade}\n` +
+            `Message: ${message}\n\n` +
+            `Please send me more information about enrollment.`
+        );
+
+        window.open(`https://m.me/hephzibahschool?text=${messengerMessage}`, '_blank');
+        alert('Thank you for your inquiry! We will redirect you to Messenger to complete your message.');
+        this.reset();
+    });
+
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.classList.remove('lazy-load');
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Animate elements on scroll
+    if ('IntersectionObserver' in window) {
+        const animationObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .testimonial-card').forEach(el => {
+            animationObserver.observe(el);
+        });
+    }
+});
+
+</script>
+
+
+</body>
+</html>
